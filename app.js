@@ -5,6 +5,7 @@
 
 // 1. Scanned local image files directly from the project directory
 const LOCAL_IMAGE_FILES = [
+  'Pull-Limb Mushroom(300).jpg',
   'Black cat with fish keychain(200).jpg',
   'Cat with fish keychain(200).jpg',
   'Couple penguin(250 each).jpg',
@@ -39,7 +40,13 @@ function toTitleCase(str) {
       if (index > 0 && minorWords.has(lower)) {
         return lower;
       }
-      return lower.charAt(0).toUpperCase() + lower.slice(1);
+      return word
+        .split('-')
+        .map(part => {
+          const lPart = part.toLowerCase();
+          return lPart.charAt(0).toUpperCase() + lPart.slice(1);
+        })
+        .join('-');
     })
     .join(' ');
 }
