@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frostoria Stitches | We Stitch Your Memories</title>
+  <meta name="description" content="We stitch your memories. Handcrafted crochet plushies, keychains, and cozy home accents lovingly made by Frostoria Stitches.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#FAF7F2',
+              200: '#F5ECE3',
+              300: '#EAE0D5',
+            },
+            sage: {
+              50: '#F4F7F3',
+              100: '#E5EDE3',
+              200: '#CADCC7',
+              300: '#AEC9AA',
+              500: '#6E8B68',
+              600: '#587352',
+              700: '#43583E',
+            },
+            terracotta: {
+              50: '#FAF2EE',
+              100: '#F4E2D9',
+              400: '#D88275',
+              500: '#C0685A',
+            },
+            warm: {
+              50: '#FBF9F7',
+              100: '#F5F1EB',
+              200: '#ECE4DA',
+              300: '#DFD4C7',
+              400: '#B8A89A',
+              600: '#73655A',
+              800: '#3D342D',
+              900: '#26201B',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cream-100 text-warm-900 font-sans antialiased selection:bg-sage-100 selection:text-sage-700">
+
+  <!-- Top Minimalist Header -->
+  <header class="sticky top-0 z-40 bg-cream-100/90 backdrop-blur-md border-b border-[#EFE8E1] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Custom Brand Logo & Title -->
+      <a href="#" class="flex items-center gap-3.5 group focus:outline-hidden" aria-label="Frostoria Stitches Home">
+        <!-- Cute Custom Handmade SVG Logo -->
+        <div class="relative shrink-0 transition-transform duration-300 group-hover:scale-105">
+          <svg class="w-11 h-11" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Cozy circular frame -->
+            <circle cx="50" cy="50" r="44" fill="#F5ECE3" stroke="#E6DDD4" stroke-width="2"/>
+            
+            <!-- Sleek wooden crochet hook -->
+            <path d="M22 78 L68 32 C72 28 77 28 79 30 C81 32 80 37 76 41 L73 44 C72 45 70 45 69 44 C68 43 68 41 70 39 L72 37 C73 36 73 34 72 33 C71 32 69 32 68 33 L24 77 C23 78 21 78 20 77 C19 76 20 74 21 73 L22 78Z" fill="#A87C63"/>
+            
+            <!-- Main Sage Yarn Ball -->
+            <circle cx="48" cy="52" r="26" fill="#6E8B68" stroke="#587352" stroke-width="2.5"/>
+            
+            <!-- Curved Yarn Thread Stitch Lines -->
+            <path d="M28 44 C34 36 54 36 64 46" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M25 54 C32 64 56 66 68 54" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M36 32 C48 38 58 56 52 74" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M42 30 C56 42 54 62 40 76" stroke="#FAF7F2" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+            
+            <!-- Trailing Yarn Tail with loop -->
+            <path d="M68 62 C74 68 78 72 84 66 C88 62 82 56 76 60" stroke="#6E8B68" stroke-width="2.5" stroke-linecap="round"/>
+            
+            <!-- Cute Hand-stitched 5-Petal Coral Flower -->
+            <g transform="translate(68, 22)">
+              <circle cx="0" cy="-5" r="3.2" fill="#D88275"/>
+              <circle cx="5" cy="-2" r="3.2" fill="#D88275"/>
+              <circle cx="3" cy="4" r="3.2" fill="#D88275"/>
+              <circle cx="-3" cy="4" r="3.2" fill="#D88275"/>
+              <circle cx="-5" cy="-2" r="3.2" fill="#D88275"/>
+              <circle cx="0" cy="0" r="2.2" fill="#FAF7F2"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Brand Name & Tiny Sub-title -->
+        <div>
+          <h1 class="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-warm-900 leading-tight">
+            Frostoria Stitches
+          </h1>
+          <p class="text-xs sm:text-[13px] font-serif italic text-sage-700 tracking-normal font-medium">
+            We stitch your memories.
+          </p>
+        </div>
+      </a>
+
+      <!-- Minimalist Header Controls (Search / Filter Toggle & Direct Inquiries) -->
+      <div class="flex items-center gap-2">
+        <a 
+          href="https://wa.me/8801310316869" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-medium rounded-full bg-sage-50 hover:bg-sage-100 text-sage-800 border border-sage-200 shadow-xs transition-all active:scale-95"
+          title="Direct WhatsApp Inquiries (+8801310316869)"
+        >
+          <svg class="w-4 h-4 text-sage-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.896.883 2.802.883 3.179 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.77-5.773-5.77zm4.316 8.358c-.18.508-.889.967-1.393 1.02-.346.036-.78.064-2.274-.555-1.911-.793-3.14-2.737-3.235-2.865-.094-.128-.773-1.03-1.024-1.966-.035-.13-.058-.27-.058-.415 0-.753.395-1.124.536-1.267.141-.143.308-.18.411-.18.103 0 .205.001.295.005.096.004.225-.036.352.27.13.313.443 1.08.482 1.159.039.078.064.17.013.272-.052.102-.078.165-.154.254-.078.089-.163.199-.233.267-.077.075-.158.157-.068.311.09.154.4 1.03 1.488 1.996.347.309.64.444.823.502.221.07.351.059.482-.091.131-.151.564-.656.715-.881.151-.226.302-.189.508-.113.205.076 1.306.616 1.531.729.225.113.376.17.43.263.056.094.056.545-.124 1.053z"/>
+          </svg>
+          <span>Direct Inquiries</span>
+        </a>
+
+        <button 
+          id="filterToggleBtn" 
+          type="button" 
+          aria-expanded="false" 
+          aria-controls="searchFilterContainer"
+          class="flex items-center gap-2 px-3.5 py-2 text-xs sm:text-sm font-medium rounded-full bg-cream-50 hover:bg-white text-warm-800 border border-[#E5DCD3] hover:border-sage-300 shadow-xs transition-all active:scale-95"
+          title="Toggle search and filters"
+        >
+          <svg class="w-4 h-4 text-sage-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <span class="hidden sm:inline">Search & Filter</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Expandable Minimal Search & Filter Bar -->
+  <section id="searchFilterContainer" class="hidden bg-[#F5ECE3]/70 border-b border-[#E6DDD4] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 space-y-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        
+        <!-- Live Search Field -->
+        <div class="relative flex-1 max-w-md">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search crochet pieces (e.g. cat, duck, coaster)..." 
+            class="w-full pl-10 pr-10 py-2 text-sm bg-white rounded-full border border-[#DFD4C7] focus:outline-hidden focus:border-sage-500 focus:ring-2 focus:ring-sage-200 text-warm-900 placeholder-warm-400 shadow-xs transition-all"
+          >
+          <svg class="w-4 h-4 text-warm-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <button id="clearSearchBtn" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-warm-400 hover:text-warm-700 text-sm p-1" title="Clear search">
+            ✕
+          </button>
+        </div>
+
+        <!-- Filter Pills & Sorting -->
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- Category Pills -->
+          <button type="button" class="category-btn filter-pill active px-3.5 py-1.5 text-xs font-medium rounded-full border border-[#D9CFC4] bg-white text-warm-800" data-category="all">
+            All Pieces
+          </button>
+          <button type="button" class="category-btn filter-pill px-3.5 py-1.5 text-xs font-medium rounded-full border border-[#D9CFC4] bg-white text-warm-800" data-category="keychain">
+            Keychains
+          </button>
+          <button type="button" class="category-btn filter-pill px-3.5 py-1.5 text-xs font-medium rounded-full border border-[#D9CFC4] bg-white text-warm-800" data-category="plushie">
+            Plushies
+          </button>
+          <button type="button" class="category-btn filter-pill px-3.5 py-1.5 text-xs font-medium rounded-full border border-[#D9CFC4] bg-white text-warm-800" data-category="coaster">
+            Coasters & Decor
+          </button>
+
+          <!-- Price Sort Dropdown -->
+          <div class="relative ml-auto sm:ml-2">
+            <select id="sortSelect" class="text-xs bg-white border border-[#D9CFC4] text-warm-800 rounded-full px-3 py-1.5 focus:outline-hidden focus:border-sage-500 shadow-xs cursor-pointer">
+              <option value="featured">Featured Order</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name-asc">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    
+    <!-- Hero Text -->
+    <section class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage-100 text-sage-800 text-xs font-medium mb-4 border border-sage-200">
+        <span class="w-2 h-2 rounded-full bg-sage-500 animate-pulse"></span>
+        <span class="font-serif italic text-sage-900 font-semibold tracking-wide">"We stitch your memories."</span>
+        <span class="text-sage-400">•</span>
+        <span>100% Handcrafted</span>
+      </div>
+      
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-warm-900 tracking-tight leading-tight">
+        Handmade Crochet Collection
+      </h2>
+      
+      <p class="mt-3 sm:mt-4 text-sm sm:text-base text-warm-600 leading-relaxed max-w-xl mx-auto">
+        Lovingly hand-stitched amigurumi plushies, keychains, and cozy home accents crafted to bring gentle warmth and smile to your everyday moments.
+      </p>
+
+      <!-- Active Counter Badge -->
+      <div class="mt-5 flex items-center justify-center gap-2 text-xs text-warm-600 font-medium">
+        <span id="itemCount" class="px-3 py-1 bg-cream-50 rounded-full border border-[#E5DCD3]">
+          Loading pieces...
+        </span>
+      </div>
+    </section>
+
+    <!-- Product Showcase Gallery Grid -->
+    <section id="gallerySection" aria-label="Product Showcase Gallery">
+      
+      <!-- Responsive Cards Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Empty State (When search has no results) -->
+      <div id="emptyState" class="hidden text-center py-20 px-4">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-cream-200 flex items-center justify-center text-warm-400">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="font-serif text-xl font-medium text-warm-800">No crochet pieces found</h3>
+        <p class="text-sm text-warm-600 mt-1 max-w-xs mx-auto">Try searching with different keywords or reset your category filters.</p>
+        <button onclick="document.getElementById('clearSearchBtn').click();" class="mt-4 px-4 py-2 text-xs font-medium text-sage-700 bg-sage-100 hover:bg-sage-200 rounded-full transition-colors">
+          Reset Filters
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox / Image Detail Modal -->
+  <div id="lightboxModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    
+    <!-- Background Dim Overlay -->
+    <div id="lightboxBackdrop" class="absolute inset-0 bg-[#1F1916]/75 backdrop-blur-sm cursor-pointer"></div>
+
+    <!-- Modal Dialog Content Box -->
+    <div class="modal-dialog relative w-full max-w-3xl bg-white rounded-3xl overflow-hidden shadow-2xl border border-white/20 z-10 flex flex-col md:flex-row max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button 
+        id="lightboxClose" 
+        type="button" 
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-all backdrop-blur-xs"
+        aria-label="Close modal"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Lightbox Main Image Area -->
+      <div class="relative w-full md:w-3/5 bg-[#F5ECE3] flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[380px]">
+        <img 
+          id="lightboxImg" 
+          src="" 
+          alt="" 
+          class="w-full h-full object-cover object-center max-h-[60vh] md:max-h-[80vh]"
+        />
+
+        <!-- Navigation Buttons -->
+        <button 
+          id="lightboxPrev" 
+          type="button" 
+          class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-warm-900 shadow-md flex items-center justify-center transition-all"
+          aria-label="Previous image"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button 
+          id="lightboxNext" 
+          type="button" 
+          class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-warm-900 shadow-md flex items-center justify-center transition-all"
+          aria-label="Next image"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Lightbox Product Details Sidebar -->
+      <div class="w-full md:w-2/5 p-6 sm:p-8 flex flex-col justify-between bg-white overflow-y-auto">
+        <div class="space-y-4">
+          
+          <div class="flex items-center gap-2">
+            <span id="lightboxCategory" class="px-2.5 py-1 text-xs font-medium tracking-wide bg-sage-50 text-sage-600 rounded-full border border-sage-200">
+              Handmade Piece
+            </span>
+          </div>
+
+          <div>
+            <h3 id="lightboxTitle" class="font-serif text-2xl font-semibold text-warm-900 leading-snug">
+              Product Name
+            </h3>
+            <p id="lightboxPrice" class="mt-2 text-2xl font-bold text-sage-600">
+              ৳0
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-[#EFE8E1]">
+            <h4 class="text-xs uppercase tracking-wider font-semibold text-warm-400">Craftsmanship</h4>
+            <p id="lightboxDetails" class="mt-1 text-xs sm:text-sm text-warm-600 leading-relaxed">
+              Hand-crocheted with 100% soft premium milk cotton yarn, hypo-allergenic fiberfill, and stitched with love.
+            </p>
+          </div>
+
+          <div class="pt-2 text-xs text-warm-600 space-y-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-sage-500">✓</span> Stitched carefully by hand
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sage-500">✓</span> Washable & durable soft yarn
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-sage-500">✓</span> Custom colors upon request
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-6 pt-5 border-t border-[#EFE8E1] space-y-2">
+          <button 
+            id="lightboxInquireBtn" 
+            type="button" 
+            class="w-full py-3 px-4 bg-sage-600 hover:bg-sage-700 text-white font-medium text-sm rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-5.805 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            Inquire / Order Piece
+          </button>
+
+          <button 
+            id="lightboxCopyBtn" 
+            type="button" 
+            class="w-full py-2.5 px-4 bg-cream-50 hover:bg-cream-200 text-warm-700 font-medium text-xs rounded-xl border border-[#E5DCD3] transition-colors flex items-center justify-center gap-1.5"
+          >
+            <svg class="w-3.5 h-3.5 text-warm-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            Copy Item Details
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Minimalist Clean Footer -->
+  <footer class="mt-auto stitch-border-top bg-cream-50/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-600">
+      
+      <div class="flex items-center gap-2">
+        <span>© 2026 Frostoria Stitches.</span>
+        <span>•</span>
+        <span class="font-serif italic text-warm-700">"We stitch your memories."</span>
+      </div>
+
+      <div class="flex items-center gap-5">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-sage-600 transition-colors flex items-center gap-1">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="https://wa.me/8801310316869" target="_blank" rel="noopener noreferrer" class="hover:text-sage-600 transition-colors flex items-center gap-1 font-medium" title="Chat on WhatsApp (+8801310316869)">
+          <svg class="w-4 h-4 text-sage-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.896.883 2.802.883 3.179 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.77-5.773-5.77zm4.316 8.358c-.18.508-.889.967-1.393 1.02-.346.036-.78.064-2.274-.555-1.911-.793-3.14-2.737-3.235-2.865-.094-.128-.773-1.03-1.024-1.966-.035-.13-.058-.27-.058-.415 0-.753.395-1.124.536-1.267.141-.143.308-.18.411-.18.103 0 .205.001.295.005.096.004.225-.036.352.27.13.313.443 1.08.482 1.159.039.078.064.17.013.272-.052.102-.078.165-.154.254-.078.089-.163.199-.233.267-.077.075-.158.157-.068.311.09.154.4 1.03 1.488 1.996.347.309.64.444.823.502.221.07.351.059.482-.091.131-.151.564-.656.715-.881.151-.226.302-.189.508-.113.205.076 1.306.616 1.531.729.225.113.376.17.43.263.056.094.056.545-.124 1.053z"/>
+          </svg>
+          Direct Inquiries (+880 1310-316869)
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-warm-900 text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-lg border border-warm-800 flex items-center gap-2 pointer-events-none">
+    <svg class="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span id="toastMessage">Product details copied!</span>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js" defer></script>
+</body>
+</html>
