@@ -13,7 +13,8 @@ const LOCAL_IMAGE_FILES = [
   'Reversible octopus(200).jpg',
   'Small strawberry hat mashroom (150).jpg',
   'Tulip keychain(150).jpg',
-  'Pull-Limb Mushroom(300).jpg'
+  'Pull-Limb Mushroom(300).jpg',
+  'Amigurumi duck with removable accessories(399).jpg'
 ];
 
 // Configuration
