@@ -5,7 +5,9 @@
 
 // 1. Scanned local image files directly from the project directory
 const LOCAL_IMAGE_FILES = [
-  'Amigurumi duck with removable accessories(399).jpg',
+  'Amigurumi duck with removable accessories(400).jpg',
+  'Mini strawberry mushroom(80).jpg',
+  'Orange jellyfish(350).jpg',
   'Black cat with fish keychain(200).jpg',
   'Cat with fish keychain(200).jpg',
   'Couple penguin(250 each).jpg',
