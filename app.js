@@ -13,7 +13,7 @@ const LOCAL_IMAGE_FILES = [
   'Flower coaster(500).jpg',
   'Mini duck(150).jpg',
   'Reversible octopus(200).jpg',
-  'Small strawberry hat mashroom (150).jpg',
+  'Mini strawberry mushroom(100).jpg',
   'Tulip keychain(150).jpg',
   'Pull-Limb Mushroom(300).jpg'
 ];
