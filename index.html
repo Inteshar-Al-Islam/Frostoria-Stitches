@@ -56,7 +56,28 @@
   </script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=5">
+
+  <!-- Guaranteed 2 columns on mobile devices (overrides any cache or external latency) -->
+  <style>
+    #productGrid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 0.75rem !important;
+    }
+    @media (min-width: 768px) {
+      #productGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.5rem !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      #productGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 1.75rem !important;
+      }
+    }
+  </style>
 </head>
 <body class="bg-cream-100 text-warm-900 font-sans antialiased selection:bg-sage-100 selection:text-sage-700">
 
@@ -168,7 +189,7 @@
   </section>
 
   <!-- Hero Section -->
-  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+  <main class="flex-1 max-w-7xl mx-auto w-full px-3.5 sm:px-6 lg:px-8 py-8 sm:py-14">
     
     <!-- Hero Text -->
     <section class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
@@ -199,7 +220,7 @@
     <section id="gallerySection" aria-label="Product Showcase Gallery">
       
       <!-- Responsive Cards Grid -->
-      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7">
+      <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-7">
         <!-- Rendered dynamically by app.js -->
       </div>
 
@@ -383,6 +404,6 @@
   </div>
 
   <!-- Application Script -->
-  <script src="app.js" defer></script>
+  <script src="app.js?v=5" defer></script>
 </body>
 </html>

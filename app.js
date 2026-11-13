@@ -219,7 +219,7 @@ function renderProductGrid() {
   elements.productGrid.innerHTML = currentFilteredProducts.map((product, index) => {
     return `
       <article 
-        class="product-card group bg-white rounded-2xl overflow-hidden border border-[#EFE8E1] cursor-pointer flex flex-col justify-between"
+        class="product-card group bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-[#EFE8E1] cursor-pointer flex flex-col"
         onclick="openLightbox(${index})"
         role="button"
         tabindex="0"
@@ -237,13 +237,13 @@ function renderProductGrid() {
           />
           
           <!-- Subtle Category Badge -->
-          <span class="absolute top-3 left-3 px-2.5 py-1 text-xs font-medium tracking-wide bg-white/90 backdrop-blur-sm text-[#587352] rounded-full border border-[#E3ECE1] shadow-xs">
+          <span class="absolute top-2 left-2 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] sm:text-xs font-medium tracking-wide bg-white/95 backdrop-blur-xs text-[#587352] rounded-full border border-[#E3ECE1] shadow-xs truncate max-w-[65%] sm:max-w-none">
             ${product.categoryLabel}
           </span>
 
           <!-- Hover View Indicator -->
           <div class="absolute inset-0 bg-[#26201B]/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="px-4 py-2 bg-white/95 text-[#26201B] rounded-full text-xs font-semibold tracking-wider uppercase shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-1.5">
+            <span class="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/95 text-[#26201B] rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 text-[#6E8B68]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -254,19 +254,18 @@ function renderProductGrid() {
         </div>
 
         <!-- Clean Product Info -->
-        <div class="p-4 sm:p-5 flex items-center justify-between gap-3 bg-white">
-          <div class="min-w-0 flex-1">
-            <h3 class="font-serif text-base sm:text-lg font-medium text-[#26201B] truncate group-hover:text-[#6E8B68] transition-colors">
-              ${product.name}
-            </h3>
-            <p class="text-xs text-[#73655A] mt-0.5">Handmade crochet</p>
+        <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-2.5">
+              <h3 class="font-serif text-xs sm:text-lg font-medium text-[#26201B] line-clamp-2 sm:line-clamp-1 group-hover:text-[#6E8B68] transition-colors leading-snug sm:leading-normal" title="${product.name}">
+                ${product.name}
+              </h3>
+              <span class="shrink-0 self-start sm:self-auto inline-block px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#FAF7F2] text-[#6E8B68] font-bold sm:font-semibold text-xs sm:text-sm rounded-md sm:rounded-lg border border-[#EFE8E1]">
+                ${product.price}
+              </span>
+            </div>
           </div>
-          
-          <div class="shrink-0 text-right">
-            <span class="inline-block px-3 py-1 bg-[#FAF7F2] text-[#6E8B68] font-semibold text-sm sm:text-base rounded-lg border border-[#EFE8E1]">
-              ${product.price}
-            </span>
-          </div>
+          <p class="text-[10px] sm:text-xs text-[#73655A] mt-1 sm:mt-0.5">Handmade crochet</p>
         </div>
       </article>
     `;
